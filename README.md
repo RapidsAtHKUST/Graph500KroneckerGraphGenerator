@@ -24,8 +24,16 @@ make all
 
 ## Example
 
-To produce a data file with 2^16 vertices and an average of 4 edges per vertex, with tsv output, do:
+* To produce a data file with `2^16` vertices and an average of `4` edges per vertex (degree `8`), with tsv output, do:
 
 ```
 ./generator_omp	16 -e 4 -o output16.txt
+```
+
+* generate binary files, turning on the switch option `-b`
+
+```
+./generator_omp 24 -e 16 -o s24.kron.bin -b
+./generator_omp 28 -e 15 -o rapids-s28.e15.kron.edgelist.bin -b
+./generator_omp 29 -e 10 -o rapids-s29.e10.kron.edgelist.bin -b
 ```
